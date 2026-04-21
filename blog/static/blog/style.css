@@ -48,3 +48,11 @@ h1 {
     text-align: center;
     color: rgb(57, 72, 57);
 }
+
+.userText {
+    text-align: right;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 25px;
+    color: rgb(109, 111, 109);
+}
