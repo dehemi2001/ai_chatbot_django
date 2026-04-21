@@ -34,6 +34,11 @@
             $('#textInput').val("");
 
             $('#chatbot').append(userHtml);
+
+            $.get('/blog/getResponse', { userMessage: userText }).done(function (data) {
+                var returnMessage = "<p class='botText'>Chatbot: <span>" + data + "</span>";
+                $('#chatbot').append(returnMessage);
+            })
         }
 
         $('#buttonInput').click(function () {
