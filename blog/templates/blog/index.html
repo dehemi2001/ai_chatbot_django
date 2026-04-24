@@ -35,8 +35,8 @@
 
             $('#chatbot').append(userHtml);
 
-            $.get('/blog/getResponse', { userMessage: userText }).done(function (data) {
-                var returnMessage = "<p class='botText'>Chatbot: <span>" + data + "</span>";
+            $.get('/getResponse', { userMessage: userText }).done(function (data) {
+                var returnMessage = "<p class='botText'>Chatbot: <span>" + data + "</span></p>";
                 $('#chatbot').append(returnMessage);
             })
         }
@@ -45,6 +45,9 @@
             getUserResponse();
         });
     </script>
+    <footer align="center">
+        <p>&copy; {% now "Y" %} Dehemi Patabendige. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
